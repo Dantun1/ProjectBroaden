@@ -11,19 +11,6 @@ pandas
 Create venv in local version and install these packages. Move main.py and recsys_utils.py into venv.
 
 
-DIARY
-
-03/08 - I fixed the session variables so the next post and associated functions work even if the snippetIds in the database are not sequential. Now, if I generate predicted IDs,
-I can simply put the array of recommended ids into the snippetIds session variable and the code will still work. Very happy today as was fixing the error for so long, type BS. 
-Likes and Bookmarks work as well, I just need to add the comments functionality now which requires some thought. Will start soon and hopefully finish before summer session ends.
-Once I have comments working, I will set up a simple profile page with the names of liked posts or smth for now. After that, I will generate the snippets and give it to people to 
-generate data for the ML model. 
-
-07/08 - I've got comments almost working, only thing is that I need to figure out how to be able to send a reply comment. After that, It is just formatting of the discover page 
-and adding snippets. In the profile page, I'll have ability to delete comments, view liked posts/bookmarked posts/replies to posts. After I've got the profile page, I will format it
-and make it look usable/nice. At some point when I am comfortable with its useability, I will try to set the website up on a web hosting service to collect data about articles.
-
-08/08 - Comments working let's goooo. Discover page looks set, just need some design changes to comment section in particular but also margin changes etc to make sure it is readable. The issue with the comments was that when replying to a comment, the queryselectorall() ran before the new comments/html had been added so it didn't recognise anything and returned an empty nodeList. I just changed the position of the queryselector to make sure it was after all html had been added. Will start working on a discover page; I'll begin by planning the layout for the page on my ipad, then think about how I can implement it. Plan continuing as normal.
 
 
 
