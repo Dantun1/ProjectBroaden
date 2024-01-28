@@ -1,14 +1,10 @@
-27/04/23 REQUIREMENTS
+To test website, you must start a local web server/database. On mac, install XAMPP and save the project code in "htdocs". 
 
-Xampp installed with project saved in htdocs.
+The database schema is included in the word documentation for the project and must be recreated for the website to function properly.
 
-Python Libraries:
+The database connection variables (tablename username, etc) in the files (dbh.inc.php, and recommender.py) must also be changed.
 
-tensorflow
-numpy
-pandas
-
-Create venv in local version and install these packages. Move main.py and recsys_utils.py into venv.
+Python packages are detailed in the requirements.txt file. 
 
 
 
