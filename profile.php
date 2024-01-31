@@ -5,6 +5,7 @@ session_start();
 <?php
     include_once 'header.php';
 ?>
+<!-- Base HTML of the profile page -->
 
 <body>
     <section class="signup-form">
