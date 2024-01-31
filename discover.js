@@ -277,7 +277,6 @@ document.getElementById('comment-form').addEventListener('submit', function(even
   `;
     commentContainer.insertAdjacentHTML('beforeend', commentHtml);}
   
-      // Reset the input field
     document.getElementById('comment-input').value = '';
   })
   .catch(error => {
