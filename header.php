@@ -1,7 +1,7 @@
 <?php
 session_start();
 ?>
-
+<!-- Header of the website. Shows login/signup or logout/profile depending on whether there is a session or not. -->
 <!DOCTYPE html>
 <html lang="en">
 
