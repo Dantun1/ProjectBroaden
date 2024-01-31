@@ -1,5 +1,5 @@
 <?php
-
+// File performs error checking of inputted variables on signup and, if everything is valid, adds user info to database.
 
 if (isset($_POST["submit"])) {
     $name = $_POST["name"];
