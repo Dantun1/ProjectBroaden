@@ -1,6 +1,7 @@
 <?php
     include_once 'header.php';
 ?>
+<!-- Privacy policy page -->
 
 <body>
     <section class="signup-form">
@@ -13,14 +14,9 @@
                 
             </p1>
             <p2>
-            Data pertaining to user interactions is utilized for the purpose of curating and recommending article snippets to our users.
+            Data pertaining to user interactions is utilized for the purpose of curating and recommending snippets to our users.
             </p2>
         </div>
-
-
-
-
-
     </section>
 </body>
 
