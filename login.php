@@ -1,6 +1,7 @@
 <?php
     include_once 'header.php';
 ?>
+<!-- Login form -->
 
 <section class="signup-form">
         <form class="box" action="includes/login.inc.php" method="post">
