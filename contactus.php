@@ -2,6 +2,7 @@
     include_once 'header.php';
     session_start()
 ?>
+<!-- Contact us page -->
 
 <body>
     <section class="signup-form">
