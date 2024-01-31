@@ -3,6 +3,7 @@
 session_start();
 include_once 'header.php';
 ?>
+<!-- Base HTML of the article viewer/book on the discovery page -->
 
 <body>
     <section class="interactive-article-space">
