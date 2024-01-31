@@ -3,21 +3,20 @@ session_start();
 
 $serverName = "localhost";
 $dbUsername = "root";
-$dbPassword = "*Danulik2005";
-$dbName = "broaden";
-
+$dbPassword = ;
+$dbName = ;
+// File toggles the like button, similar to bookmark_post.php
 
 $conn = mysqli_connect($serverName, $dbUsername, $dbPassword, $dbName);
 
 if (!$conn) {
     die("connection failed: " . mysqli_connect_error());
 } 
-//connection to database
+
 
 $query = "SELECT * FROM snippets;";
 $result = mysqli_query($conn, $query);
 $snippets = mysqli_fetch_all($result, MYSQLI_ASSOC);
-//array of snippets
 
 if (isset($_SESSION["userid"])){
     $current_index = (int)$_SESSION["snippetIds"][$_SESSION["current_index"]];
@@ -27,11 +26,9 @@ if (isset($_SESSION["userid"])){
     $result = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($result) > 0) {
-        // Remove the like if it already exists
         $query = "DELETE FROM userlikes WHERE userId = $uId AND snippetId = $current_index;";
         mysqli_query($conn, $query);
     } else {
-        // Add the like if it doesn't exist
         $query = "INSERT INTO userlikes (userId, snippetId) VALUES ($uId, $current_index);";
         mysqli_query($conn, $query);
     }
