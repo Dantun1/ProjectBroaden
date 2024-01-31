@@ -36,7 +36,7 @@ def calculate_rating(user_id,snippet_id):
     elif num_comments <=3:
         user_rating += 2
     else: 
-        user_rating += 3.5
+        user_rating += 2.5
 
     if 'seen' in interactions and user_rating == 0:
         user_rating +=0.1
