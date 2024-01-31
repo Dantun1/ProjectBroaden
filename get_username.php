@@ -1,5 +1,5 @@
 <?php
-
+// Gets username of a given user ID
 include 'includes/dbh.inc.php';
 session_start();
 
