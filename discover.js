@@ -1,6 +1,6 @@
 document.getElementById("next-article").addEventListener("click", function() {
 
-// This function generates the next article, along with the associated data (whether it is liked/bookmarked, comments) when the next page button is pressed
+// Function generates the next article, along with the associated data (whether it is liked/bookmarked, comments) when the next page button is pressed
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "next_post.php?increment=1", true);
     xhr.onreadystatechange = function() {
@@ -19,6 +19,7 @@ document.getElementById("next-article").addEventListener("click", function() {
 });
 
 document.getElementById("previous-post").addEventListener("click", function(){
+  // Function generates the previous article
   console.log("aaaa")
   var xhr = new XMLHttpRequest();
   xhr.open("GET", "next_post.php?increment=-1", true);
@@ -40,7 +41,7 @@ document.getElementById("previous-post").addEventListener("click", function(){
 
 
 document.getElementById("like").addEventListener("click", function() {
-    // function that handles the like toggler, fills the heart icon if the post is liked, and empties it if it is not.
+    // Function that handles the like toggler, fills the heart icon if the post is liked, and empties it if it is not.
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "like_post.php");
     xhr.onreadystatechange = function() {
@@ -62,7 +63,7 @@ document.getElementById("comment").addEventListener("click", function() {
 });
 
 document.getElementById("bookmark").addEventListener("click", function() {
-    // function that handles bookmark toggler, fills the bookmark icon if the post is bookmarked, and empties it if it is not.
+    // Function that handles bookmark toggler, fills the bookmark icon if the post is bookmarked, and empties it if it is not.
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "bookmark_post.php");
     xhr.onreadystatechange = function() {
@@ -140,7 +141,7 @@ function fetchParentComments() {
   
 
   async function fetchReplies(parentCommentId) {
-    // this function returns all the replies for a given parent comment id. It is called in the fetchParentComments function which I really should change to fetchComments
+    // this function returns all the replies for a given parent comment id.
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
       xhr.open('GET', `fetch-replies.php?parentCommentId=${parentCommentId}`, true);
@@ -174,7 +175,7 @@ function fetchParentComments() {
           }
           resolve(output);
         } else {
-          reject('Error getting the replies');
+          reject('Error getting replies');
         }
       }
       xhr.send();
@@ -182,6 +183,7 @@ function fetchParentComments() {
   }
 
 function fillInformation(response){
+    // Function to fill the toggle buttons and add the content of the snippet onto the page.
     document.getElementById("snippet").innerHTML = "<h1 class = 'article-title'>" + response.title + "</h2><p class = 'article'>" + response.body + "</p>";
     if (response.liked === true){
         document.getElementById("like").style.fontVariationSettings = "'FILL' 30, 'wght' 700, 'GRAD' 0, 'opsz' 48";
