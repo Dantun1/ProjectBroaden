@@ -3,9 +3,10 @@ session_start();
 
 $serverName = "localhost";
 $dbUsername = "root";
-$dbPassword = "*Danulik2005";
-$dbName = "broaden";
+$dbPassword = ;
+$dbName = ;
 
+// If user is logged in, increments the current snippet id by +1 or -1 depending on whether user has clicked the back/forward button. Returns all the content/interaction information of the snippet as a JSON file.
 
 $conn = mysqli_connect($serverName, $dbUsername, $dbPassword, $dbName);
 
