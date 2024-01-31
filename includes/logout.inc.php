@@ -1,5 +1,7 @@
 <?php
 
+// File ends the user session.
+
 session_start();
 session_unset();
 session_destroy();
