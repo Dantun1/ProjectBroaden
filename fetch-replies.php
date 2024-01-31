@@ -1,5 +1,5 @@
 <?php
-
+// Gets all replies for a given parent comment ID
 include 'includes/dbh.inc.php';
 session_start();
 
