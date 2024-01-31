@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 import recommender
+# Flask application to get the predictions every time a user logs in.
 
 api = Flask(__name__)
 
