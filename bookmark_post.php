@@ -2,10 +2,11 @@
 require_once 'includes/dbh.inc.php';
 session_start();
 
+// File handles the bookmark button toggling. It checks if the user has/has not bookmarked the current snippet ID in the userbookmarks table and either inserts/removes a row. 
+
 $query = "SELECT * FROM snippets;";
 $result = mysqli_query($conn, $query);
 $snippets = mysqli_fetch_all($result, MYSQLI_ASSOC);
-//array of snippets
 
 if (isset($_SESSION["userid"])){
     $current_index = (int)$_SESSION["snippetIds"][$_SESSION["current_index"]];
@@ -15,11 +16,9 @@ if (isset($_SESSION["userid"])){
     $result = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($result) > 0) {
-        // Remove the bookmark if it already exists
         $query = "DELETE FROM userbookmarks WHERE userId = $uId AND snippetId = $current_index;";
         mysqli_query($conn, $query);
     } else {
-        // Add the bookmark if it doesn't exist
         $query = "INSERT INTO userbookmarks (userId, snippetId) VALUES ($uId, $current_index);";
         mysqli_query($conn, $query);
     }
