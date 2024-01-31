@@ -1,4 +1,5 @@
 <?php
+// Adds a user inputed comment to the comments database.
 
 include 'includes/dbh.inc.php';
 session_start();
