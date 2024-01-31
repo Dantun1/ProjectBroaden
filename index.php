@@ -1,6 +1,7 @@
 <?php
 include_once 'header.php';
 ?>
+<!-- Welcome page with information on the website -->
 <section class="introductory-area">
 
     <div class="welcome-message">
@@ -19,6 +20,7 @@ include_once 'header.php';
         </div>
 
         <div class="confused-person-image">
+            <img src="Kid.jpeg" alt="confusedman" class="confused-man">
 
 
         </div>
@@ -26,7 +28,7 @@ include_once 'header.php';
     <div class="first-ad">
 
         <div class="confused-person-image">
-            <!-- <img src="confusedman.jpeg" alt="confusedman" class="confused-man"> -->
+            <img src="Sample.png" alt="confusedman" class="confused-man">
         </div>
 
         <div class="ad-text">
