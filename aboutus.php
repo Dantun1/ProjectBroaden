@@ -1,7 +1,7 @@
 <?php
     include_once 'header.php';
 ?>
-
+<!-- About us page -->
 <body>
     <section class="signup-form">
         <div class="info-text">
@@ -17,16 +17,3 @@
                 recommends articles ("snippets") according to user interactions. 
             </p2>
         </div>
-
-
-
-
-
-    </section>
-</body>
-
-</html>
-
-<?php
-    include_once 'footer.php';
-?>
