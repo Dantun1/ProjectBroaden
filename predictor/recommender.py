@@ -3,7 +3,7 @@ import tensorflow as tf
 from tensorflow import keras
 import pandas as pd
 import mysql.connector
-
+# Collaborative filtering model to predict what articles the user would like.
 
 def calculate_rating(user_id,snippet_id):
     """
@@ -12,8 +12,8 @@ def calculate_rating(user_id,snippet_id):
     conn = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="*Danulik2005",
-    database="broaden"
+    password="",
+    database=""
     )
     cursor = conn.cursor()
     cursor.execute(f'SELECT "liked" AS interaction FROM userlikes WHERE userlikes.userId = {user_id} AND userlikes.snippetId = {snippet_id} UNION ALL SELECT "bookmarked" AS interaction FROM userbookmarks WHERE userbookmarks.userId = {user_id} AND userbookmarks.snippetId = {snippet_id} UNION ALL SELECT "commented" AS interaction FROM comments WHERE comments.userId = {user_id} AND comments.snippetId = {snippet_id} UNION ALL SELECT "seen" AS interaction FROM userseen WHERE userseen.userId = {user_id} AND userseen.snippetId = {snippet_id}')
@@ -54,8 +54,8 @@ def compute_ratings_matrix():
     conn = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="*Danulik2005",
-    database="broaden"
+    password="",
+    database=""
 )
     cursor = conn.cursor()
     cursor.execute('SELECT users.usersId, snippets.snippetId FROM users CROSS JOIN snippets;')
@@ -105,8 +105,8 @@ def compute_user_predictions(user_id):
     conn = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="*Danulik2005",
-    database="broaden"
+    password="",
+    database=""
     )
     ratings, binary, user_ids, snippet_ids = compute_ratings_matrix()
     ratings_mean, ratings_norm = normalise_ratings(ratings,binary)
@@ -149,6 +149,7 @@ def compute_user_predictions(user_id):
     print(ordered_user_predictions)
 
     return ordered_user_predictions
+
 
 
 
