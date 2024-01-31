@@ -1,6 +1,7 @@
 <?php
     include_once 'header.php';
 ?>
+<!-- Services page? -->
 
 <body>
     <section class="signup-form">
