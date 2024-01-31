@@ -1,5 +1,5 @@
 <?php
-
+// Gets all parent comments for a given article as a JSON file.
 include 'includes/dbh.inc.php';
 session_start();
 
