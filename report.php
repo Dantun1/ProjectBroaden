@@ -1,7 +1,7 @@
 <?php
     include_once 'header.php';
 ?>
-
+<!-- Report an issue page -->
 <body>
     <section class="signup-form">
         <div class="info-text">
@@ -14,11 +14,6 @@
             <p2>
             </p2>
         </div>
-
-
-
-
-
     </section>
 </body>
 
